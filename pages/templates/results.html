@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 36px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th,
+table td {
+    padding: 10px;
+    text-align: left;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f9f9f9;
+    font-weight: bold;
+  margin-right: 1px;
+}
+table td {
+    background-color: #fff;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f00;
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #333;
+}
+
+</style>
+<body>
+
+{% block content %}
+  <h1>GLOBAL SALES</h1>
+  <table>
+    <tr>
+      <th>Sales in different part of World</th>
+      <td>In Millions</td>
+    </tr>
+    <tr>
+      <th>Rank</th>
+      <td>{{Rank}}</td>
+    </tr>
+    <tr>
+      <th>Sales in North America</th>
+      <td>{{NA_Sales}}</td>
+    </tr>
+    <tr>
+      <th>Sales in Europe</th>
+      <td>{{EU_Sales}}</td>
+    </tr>
+    <tr>
+      <th>Sales in Japan</th>
+      <td>{{JP_Sales}}</td>
+    </tr>
+    <tr>
+      <th>Sales in the rest of the world</th>
+      <td>{{Other_Sales}}</td>
+    </tr>
+    <tr>
+      <th>Prediction of Global Sales</th>
+      <td>{{prediction}}</td>
+    </tr>
+  </table>
+  {{ plot_div|safe }}
+{% endblock content %}
+
+
+
+</body>
+</html>
