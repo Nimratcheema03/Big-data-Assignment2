@@ -5,6 +5,5 @@ from .views import homePageView, results, homePost
 urlpatterns = [
     path('', homePageView, name='home'),
     path('homePost/', homePost, name='homePost'),
-    path('results/<int:Rank>/<str:NA_Sales>/<str:EU_Sales>/<str:JP_Sales>/<str:Other_Sales>/', results, name='results'),
-
+    path('results/<str:concave_points_worst>/<str:perimeter_worst>/<str:concave_points_mean>/<str:radius_worst>/<str:perimeter_mean>/<str:area_worst>/', results, name='results'),
 ]

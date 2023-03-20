@@ -14,7 +14,7 @@
   width: 100%;
   height: 100%;
   border: 1px solid #CCC;
-  background: url(https://media4.giphy.com/media/BHNfhgU63qrks/giphy.gif) center center no-repeat;
+  background: url(https://tse3.mm.bing.net/th?id=OIP.ob2cHwicDdOnuLigVRSPxwHaEK&pid=Api&P=0) center center no-repeat;
   background-size: cover;
   margin: 30px auto;
   border-radius: 20px;
@@ -85,17 +85,19 @@ h3{
 {% csrf_token %}
     <div class="login">
   <div class="form">
-    <h2>Welcome, Input the values to find the global sales of your favourite game</h2>
-    <h3>Ranking of overall sales</h3>
-<input type="text" id="Rank" name="Rank" placeholder="10"><br><br>
-    <h3>Sales in North America</h3>
-<input type="text" id="NA_Sales" name="NA_Sales" placeholder="26.93"><br><br>
-<h3>Sales in Europe</h3>
-<input type="text" id="EU_Sales" name="EU_Sales" placeholder="0.63"><br><br>
-    <h3>Sales in Japan</h3>
-<input type="text" id="JP_Sales" name="JP_Sales" placeholder="0.28"><br><br>
-    <h3>Sales in the rest of the world</h3>
-<input type="text" id="Other_Sales" name="Other_Sales" placeholder="0.47"><br><br>
+    <h2>Welcome, Predict whether the cancer is benign or malignant</h2>
+    <h3>Concavity (severity of concave portions of the contour)</h3>
+<input type="text" id="concave_points_worst" name="concave_points_worst" placeholder="0.2654"><br><br>
+    <h3>Perimeter worst</h3>
+<input type="text" id="perimeter_worst" name="perimeter_worst" placeholder="184.6"><br><br>
+<h3>Concave points</h3>
+<input type="text" id="concave_points_mean" name="concave_points_mean" placeholder="0.1471"><br><br>
+    <h3>Radius</h3>
+<input type="text" id="radius_worst" name="radius_worst" placeholder="25.38"><br><br>
+    <h3>Perimeter Mean</h3>
+<input type="text" id="perimeter_mean" name="perimeter_mean" placeholder="122.8"><br><br>
+          <h3>Area Worst</h3>
+<input type="text" id="area_worst" name="area_worst" placeholder="2019"><br><br>
 <input type="submit" value="POST YOUR VALUES">
   </div>
 </div>
@@ -106,7 +108,7 @@ h3{
       <div id="error-message" onload=" showErrorMessage()">
           {{ errorMessage }}
           <button onclick="hideErrorMessage()">OK</button>
-          </divshowErrorMessage></div>
+      </div>
   {% endif %}
 
 
@@ -119,10 +121,6 @@ h3{
     function hideErrorMessage() {
         document.querySelector('#error-message').style.display = 'none';
     }
-
-    // Call the showErrorMessage() function when an error occurs
-    // For example, in response to a failed AJAX request
-    // showErrorMessage();
 </script>
 </body>
 </html>
